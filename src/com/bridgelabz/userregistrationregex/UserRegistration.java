@@ -1,10 +1,30 @@
 package com.bridgelabz.userregistrationregex;
 
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
 /*
  * purpose : Usage of Java Regular Expressions and Patterns to solve User Registration Problem.
  * @author : Archana
- * @since : 31-03-2022
+ * @since : 01-04-2022
  */
 public class UserRegistration {
+    static Scanner scanner = new Scanner(System.in);
 
+    /**
+     * added first method to check match the first name
+     * // (?=.*[a-z]) # a lower case letter must occur at least once
+     * // (?=.*[A-Z]) # an upper case letter must occur at least oncce
+     */
+    public void firstName() {
+        System.out.print("Enter First Name :: ");
+        String FirstName = scanner.next();
+        boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", FirstName);
+        if (answer) {
+            System.out.println("thank you");
+        } else {
+            System.out.println("please enter valid first name ");
+        }
+
+    }
 }
