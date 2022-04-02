@@ -38,7 +38,7 @@ public class UserRegistration {
         scanner = new Scanner(System.in);
         System.out.print("Enter Last Name :: ");
         String lastName = scanner.next();
-        Boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", lastName);
+        boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", lastName);
         if (answer) {
             System.out.println("thank you");
         } else {
@@ -54,7 +54,7 @@ public class UserRegistration {
         scanner = new Scanner(System.in);
         System.out.print("Enter email ID :: ");
         String email = scanner.next();
-        Boolean answer = Pattern.matches("^[a-zA-Z0-9+_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$", email);
+        boolean answer = Pattern.matches("^[a-zA-Z0-9+_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$", email);
         if (answer) {
             System.out.println("thank you");
         } else {
@@ -75,5 +75,16 @@ public class UserRegistration {
         }
 
     }
-
+    // rule1 = minimum 8 characters
+    public void passwordEightDigit(){
+        scanner = new Scanner(System.in);
+        System.out.print("Enter password  :: " );
+        String password = scanner.nextLine();
+        boolean answer = Pattern.matches("[a-zA-Z0-9]{8,}",password);
+        if (answer){
+            System.out.println("Thank you");
+        }else {
+            System.out.println("enter valid password");
+        }
+    }
 }
