@@ -18,8 +18,8 @@ public class UserRegistration {
      */
     public void firstName() {
         System.out.print("Enter First Name :: ");
-        String FirstName = scanner.next();
-        boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", FirstName);
+        String firstName = scanner.next();
+        boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", firstName);
         if (answer) {
             System.out.println("thank you");
         } else {
@@ -34,12 +34,29 @@ public class UserRegistration {
     public void lastName() {
         scanner = new Scanner(System.in);
         System.out.print("Enter Last Name :: ");
-        String LastName = scanner.next();
-        Boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", LastName);
+        String lastName = scanner.next();
+        Boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", lastName);
         if (answer) {
             System.out.println("thank you");
         } else {
             System.out.println("please enter valid last name ");
         }
+    }
+
+    /**
+     * User's Email Address
+     */
+
+    public void email() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter email ID :: ");
+        String email = scanner.next();
+        Boolean answer = Pattern.matches("^[a-zA-Z0-9+_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$", email);
+        if (answer) {
+            System.out.println("thank you");
+        } else {
+            System.out.println("please enter valid email ID ");
+        }
+
     }
 }

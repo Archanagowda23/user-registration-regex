@@ -7,6 +7,7 @@ public class Regex {
         UserRegistration userRegistration = new UserRegistration();
         userRegistration.firstName();
         userRegistration.lastName();
+        userRegistration.email();
 
     }
 }
