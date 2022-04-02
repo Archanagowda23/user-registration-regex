@@ -12,6 +12,7 @@ public class Regex {
         userRegistration.passwordEightDigit();
         userRegistration.passwordOneUpperCase();
         userRegistration.passwordOneNum();
+        userRegistration.passwordOneSpecialCharacter();
 
     }
 }
