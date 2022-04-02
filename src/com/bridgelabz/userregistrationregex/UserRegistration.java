@@ -15,6 +15,9 @@ public class UserRegistration {
      * added first method to check match the first name
      * // (?=.*[a-z]) # a lower case letter must occur at least once
      * // (?=.*[A-Z]) # an upper case letter must occur at least once
+     * //(?=.*[0-9]) represents a digit must occur at least once.
+     * // (?=.*[@#$%^&-+=()] represents a special character that must occur at least once.
+     * // $ represents the end of the string.
      */
     public void firstName() {
         System.out.print("Enter First Name :: ");
@@ -59,4 +62,18 @@ public class UserRegistration {
         }
 
     }
+    //User's Contact Number
+    public void contactNumber(){
+        scanner = new Scanner(System.in);
+        System.out.print("Enter contact number with country code :: " );
+        String ContactNumber = scanner.nextLine();
+        boolean answer = Pattern.matches("91?[0-9]{10}",ContactNumber);
+        if (answer){
+            System.out.println("Thank you");
+        }else {
+            System.out.println("enter valid contact number");
+        }
+
+    }
+
 }

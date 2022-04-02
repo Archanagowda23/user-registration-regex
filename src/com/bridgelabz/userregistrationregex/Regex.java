@@ -8,6 +8,7 @@ public class Regex {
         userRegistration.firstName();
         userRegistration.lastName();
         userRegistration.email();
+        userRegistration.contactNumber();
 
     }
 }
