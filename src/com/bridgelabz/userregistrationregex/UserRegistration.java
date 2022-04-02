@@ -14,7 +14,7 @@ public class UserRegistration {
     /**
      * added first method to check match the first name
      * // (?=.*[a-z]) # a lower case letter must occur at least once
-     * // (?=.*[A-Z]) # an upper case letter must occur at least oncce
+     * // (?=.*[A-Z]) # an upper case letter must occur at least once
      */
     public void firstName() {
         System.out.print("Enter First Name :: ");
@@ -26,5 +26,20 @@ public class UserRegistration {
             System.out.println("please enter valid first name ");
         }
 
+    }
+
+    /**
+     * added last method to check match the last name
+     */
+    public void lastName() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter Last Name :: ");
+        String LastName = scanner.next();
+        Boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", LastName);
+        if (answer) {
+            System.out.println("thank you");
+        } else {
+            System.out.println("please enter valid last name ");
+        }
     }
 }

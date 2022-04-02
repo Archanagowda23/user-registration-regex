@@ -6,6 +6,7 @@ public class Regex {
         System.out.println("Welcome to regex program");
         UserRegistration userRegistration = new UserRegistration();
         userRegistration.firstName();
+        userRegistration.lastName();
 
     }
 }
