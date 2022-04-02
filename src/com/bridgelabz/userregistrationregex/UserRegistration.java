@@ -80,19 +80,31 @@ public class UserRegistration {
         scanner = new Scanner(System.in);
         System.out.print("Enter password  :: " );
         String password = scanner.nextLine();
-        boolean answer = Pattern.matches("[a-zA-Z0-9]{8,}",password);
+        boolean answer = Pattern.matches("[a-zA-Z]{8,}",password);
         if (answer){
             System.out.println("Thank you");
         }else {
             System.out.println("enter valid password");
         }
     }
+    // rule1 = minimum 8 characters & atleast 1 upper case
     public void passwordOneUpperCase(){
-        // rule1 = minimum 8 characters & atleast 1 upper case
         scanner = new Scanner(System.in);
         System.out.print("Enter password  :: " );
         String password = scanner.nextLine();
         boolean answer = Pattern.matches("[A-Z]+[a-z]{7,}",password);
+        if (answer){
+            System.out.println("Thank you");
+        }else {
+            System.out.println("enter valid password");
+        }
+    }
+    // rule1 = minimum 8 characters & at least 1 upper case at least one numeric
+    public void passwordOneNum(){
+        scanner = new Scanner(System.in);
+        System.out.print("Enter password  :: " );
+        String password = scanner.nextLine();
+        boolean answer = Pattern.matches("[A-Za-z0-9]{8,}",password);
         if (answer){
             System.out.println("Thank you");
         }else {

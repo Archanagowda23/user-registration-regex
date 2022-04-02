@@ -11,6 +11,7 @@ public class Regex {
         userRegistration.contactNumber();
         userRegistration.passwordEightDigit();
         userRegistration.passwordOneUpperCase();
+        userRegistration.passwordOneNum();
 
     }
 }
